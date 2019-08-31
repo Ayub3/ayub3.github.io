@@ -1,0 +1,227 @@
+ 
+ 
+ 
+ /* this is a import syntax, and i used it to import a font from google fonts. */
+ @import url('https://fonts.googleapis.com/css?family=Roboto'); 
+
+
+
+ * {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+
+
+
+body {
+  font-family: 'Roboto', sans-serif;
+  background: #333;
+  color: #fff;
+  line-height: 1.6;
+}
+
+h1,
+h2 {
+  text-align: center;
+  }
+
+.about {
+  display: flex;
+}
+
+.about p {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.slider {
+  position: relative;
+  overflow: hidden;
+  height: 100vh;
+  width: 100vw;
+}
+
+.slide {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  transition: opacity 0.4s ease-in-out;
+}
+
+.slide.current {
+  opacity: 1;
+}
+
+.slide .content {
+  position: absolute;
+  bottom: 70px;
+  left: -600px;
+  opacity: 0;
+  width: 600px;
+  background-color: rgba(255, 255, 255, 0.8);
+  color: #333;
+  padding: 35px;
+}
+
+.slide .content h1 {
+  margin-bottom: 10px;
+  color:red
+}
+
+.slide.current .content {
+  opacity: 1;
+  transform: translateX(600px);
+  transition: all 0.7s ease-in-out 0.3s;
+}
+
+.buttons button#next {
+  position: absolute;
+  top: 100%;
+  right: 15px;
+}
+
+.buttons button#prev {
+  position: absolute;
+  top:100%;
+  left: 15px;
+}
+
+.buttons button {
+  border: 2px solid #fff;
+  background-color: transparent;
+  color: #fff;
+  cursor: pointer;
+  padding: 13px 15px;
+  border-radius: 50%;
+  outline: none;
+}
+
+.buttons button:hover {
+  background-color: #fff;
+  color: #333;
+}
+
+.main-title {
+  background-color: #000;
+}
+
+.buttons .play-pause {
+  display: flex;
+  justify-content: space-around;
+
+}
+
+p {
+  font-size: 15px;
+  text-align: center;
+  color:rgb(0, 0, 0);
+  background-color: #fff;
+}
+
+h2 {
+  background-color: #900;
+}
+
+
+@media (max-width: 800px) {
+  .buttons {
+      display: none;
+  }    
+
+  .links {
+    display: flex;
+    flex-direction: row;
+    background-color: #fff;
+  }
+}
+
+
+@media (max-width: 999px) {
+  .buttons {
+      display: none;
+  }    
+
+  .links {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    background-color: #fff;
+  }
+}
+
+
+
+@media (min-width: 1000px) {
+
+  .slide .content {
+    bottom: -300px;
+    left: 0;
+    width: 100%;
+  }
+
+
+  .slide.current .content {
+    transform: translateY(-300px);
+  }
+
+  .links {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    background-color: #fff;
+  }
+    
+}
+
+a {
+    text-decoration: azure;
+}
+
+.icon {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 50px;
+}
+
+.icon a {
+    margin-top: 30px;
+    text-align: center;
+    color: #000;
+}
+
+.icon a:hover {
+  color: blue;
+}
+
+/* Backgorund Images */
+ 
+.slide:first-child {
+  background: url(https://images.performgroup.com/di/library/GOAL/9/4/arsenal-kit-2019-20-sokratis-pierre-emerick-aubameyang-alexandre-lacazette_nxlocfoqgwmj1i0lq4c8tn99k.jpg?t=-1395665445&quality=100) no-repeat
+    center top/cover;
+}
+.slide:nth-child(2) {
+  background: url(http://inn.spb.ru/images/100/DSC100196350.jpg) no-repeat
+    center top/cover;
+}
+.slide:nth-child(3) {
+  background: url(https://www.wallpaperflare.com/static/320/483/815/islam-muslim-praying-kaaba-wallpaper.jpg) no-repeat
+    center top/cover;
+}
+.slide:nth-child(4) {
+  background: url(https://hdqwalls.com/download/peaky-blinders-7h-3840x2160.jpg) no-repeat
+    center top/cover;
+}
+.slide:nth-child(5) {
+  background: url(https://images5.alphacoders.com/637/thumb-1920-637668.jpg) no-repeat
+    center top/cover;
+} 
+.slide:nth-child(6)  {
+  background: url(http://getwallpapers.com/wallpaper/full/b/2/2/541634.jpg) no-repeat
+    center center/cover;
+}
